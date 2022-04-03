@@ -1,0 +1,20 @@
+﻿@model Banner
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container mt-5">
+    <form class="forms-sample" method="post" asp-action="Create" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="Photo"></label>
+            <input class="form-control" style="width:300px" asp-for="Photo">
+            <span class="text-danger" asp-validation-for="Photo"></span>
+            <input type="text" class="form-control" asp-for="Name" maxlength=500 placeholder="Catagory">
+            <span class="text-danger" asp-validation-for="Name"></span>
+            <input type="text" class="form-control" asp-for="Discount" maxlength=500 placeholder="Discount">
+            <span class="text-danger" asp-validation-for="Discount"></span>
+        </div>
+        <button type="submit" class="btn btn-primary me-2">Submit</button>
+        <a asp-action="Index" class="btn btn-light">Cancel</a>
+    </form>
+</div>
